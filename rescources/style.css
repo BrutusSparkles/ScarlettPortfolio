@@ -1,44 +1,144 @@
+html {
+    margin-top: 30px;
+    margin-right: 100px;
+}
+
 body {
-    margin: 0px;
     padding: 0px;
+    background-color: #00181e;
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+        "nav landing landing"
+        "nav aboutMe aboutMeImg1"
+        "nav aboutMe aboutMeImg2"
+        "nav portfolio portfolio"
+        "nav contactMe contactMe";
+        grid-gap: 30px;
 }
 
 .landing {
     width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-areas: "nav landingImg";
+    height: 93vh;
+    grid-area: landing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    align-content: space-between;
     grid-area: nav;
     width: 100%;
     height: 100vh;
-    background-color: white;
 }
 
 nav h3 {
     text-align: center;
     margin: 0px;
-    color: green;
-    font-size: 1.5rem;
+    color: #ff77a8;
+    font-size: 1.3rem;
 }
 
 nav ul {
+    bottom: 1px;
+    height: 100vh;
     list-style-type: none;
+    position: fixed;
+    padding-left: 0px;
 }
 
 nav li {
-    margin: 20px 0px;
+    margin: 30px 0px;
+}
+
+.landingHome {
     padding: 10px;
 }
 
+.landingHome:hover {
+    background-color: #008395;
+    border-radius: 20px;
+}
+
+.landingAboutMe {
+    padding: 10px
+}
+
+.landingAboutMe:hover {
+    background-color: #008395;
+    border-radius: 20px;
+}
+
+.landingPortfolio {
+    padding: 10px;
+}
+
+.landingPortfolio:hover {
+    background-color: #008395;
+    border-radius: 20px;
+}
+
+.landingContactMe {
+    padding: 10px;
+}
+
+.landingContactMe:hover {
+    background-color: #008395;
+    border-radius: 20px;
+}
+
 .landingImg {
-    grid-area: landingImg;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 5px solid #ff77a8;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+}
+
+.aboutMe {
+    color: #ff77a8;
+    font-size: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    grid-area: aboutMe;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.aboutMeImg1 {
+    grid-area: aboutMeImg1;
+    background-color: #008395;
+    border: 5px solid #ff77a8;
+    border-radius: 20px;
+    height: 30vh;
+}
+
+.aboutMeImg2 {
+    grid-area: aboutMeImg2;
+    background-color: #008395;
+    border: 5px solid #ff77a8;
+    border-radius: 20px;
+    height: 30vh;
+}
+
+.portfolio {
+    box-sizing: border-box;
+    grid-area: portfolio;
+    background-color: #008395;
+    border: 5px solid #ff77a8;
+    height: auto;
+    width: 100%;
+}
+
+.contactMe {
+    grid-area: contactMe;
+    background-color: #008395;
+    border: 5px solid #ff77a8;
 }
