@@ -129,6 +129,7 @@ nav li {
 }
 
 .portfolio {
+    scroll-padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -136,26 +137,49 @@ nav li {
     box-sizing: border-box;
     grid-area: portfolio;
     color: #ff77a8;
-    border: 5px solid #ff77a8;
     border-radius: 20px;
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     font-size: 2rem;
     text-align: center;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    border: 2px solid #00181e;
+    border-radius: 5px;
+    background-color: #ff77a8;
+}
+
+::-webkit-scrollbar-corner {
+    background: none;
+}
+ 
 #portfolioHeader {
     width: 100%;
     margin: 10px;
 }
 
 .portfolioBox {
-    background-color: #008395;
     border: 5px solid #ff77a8;
     border-radius: 20px;
     margin: 15px 0px;
     width: 80%;
 }
+
+.portfolioBox:hover {
+    background-color: #008395;
+}
+
 .contactMe {
     grid-area: contactMe;
     background-color: #008395;
