@@ -3,6 +3,11 @@ html {
     margin-right: 100px;
 }
 
+a {
+    text-decoration: none;
+    margin: 0px;
+}
+
 body {
     padding: 0px;
     background-color: #00181e;
@@ -40,6 +45,10 @@ nav ul {
 
 nav li {
     margin: 30px 0px;
+}
+
+.icon130 {
+    margin: 10px 0px;
 }
 
 .landingHome {
