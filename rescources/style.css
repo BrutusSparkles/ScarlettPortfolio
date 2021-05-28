@@ -173,12 +173,20 @@ nav li {
 }
 
 .portfolioBox {
+    display: flex;
     border: 5px solid #ff77a8;
     border-radius: 20px;
     margin-top: 15px;
     width: 100%;
+    height: 27vh;
 }
 
+.portfolioBox img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 15px;
+}
 .portfolioBox:hover {
     background-color: #008395;
 }
