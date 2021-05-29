@@ -173,7 +173,9 @@ nav li {
 }
 
 .portfolioBox {
+    position: relative;
     display: flex;
+    justify-content: center;
     border: 5px solid #ff77a8;
     border-radius: 20px;
     margin-top: 15px;
@@ -187,8 +189,59 @@ nav li {
     z-index: -1;
     border-radius: 15px;
 }
-.portfolioBox:hover {
-    background-color: #008395;
+
+.boxHead {
+    align-self: center;
+    font-size: 2.5rem;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    -webkit-text-stroke:1px white;
+    transition: font-size 0.5s;
+}
+
+#dinoButt .boxHead {
+    color: khaki;
+}
+
+#dinoButt {
+    border: 5px solid khaki;
+}
+
+#mythButt .boxHead {
+    color: coral;
+}
+
+#mythButt {
+    border: 5px solid coral;
+}
+
+#paintButt .boxHead {
+    color: aqua;
+}
+
+#paintButt {
+    border: 5px solid aqua;
+}
+
+#tattooButt .boxHead {
+    color: indianred;
+}
+
+#tattooButt {
+    border: 5px solid indianred;
+}
+
+#vaultButt .boxHead {
+    color: silver;
+}
+
+#vaultButt {
+    border: 5px solid silver;
+}
+
+.boxHead:hover {
+    font-size: 3.5rem;
 }
 
 .contactMe {
