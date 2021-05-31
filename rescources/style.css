@@ -9,13 +9,12 @@ body {
     background-color: #00181e;
     display: grid;
     grid-template-columns: 10% 63% 27%;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: 
         "nav landing landing"
         "nav aboutMe aboutMeImg1"
         "nav aboutMe aboutMeImg1"
-        "nav portfolio portfolio"
-        "nav contactMe contactMe";
+        "nav portfolio portfolio";
 }
 
 .landing {
@@ -55,6 +54,9 @@ nav h3 {
 }
 
 nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     bottom: 1px;
     height: 100vh;
     list-style-type: none;
@@ -63,7 +65,10 @@ nav ul {
 }
 
 nav li {
+    display: flex;
+    justify-content: center;
     margin: 30px 0px;
+    width: 100%;
 }
 
 .icon130 {
@@ -100,11 +105,11 @@ nav li {
 .landingContactMe {
     padding: 10px;
 }
-
+/* 
 .landingContactMe:hover {
     background-color: #008395;
     border-radius: 20px;
-}
+} */
 
 .aboutMe {
     color: #ff77a8;
@@ -238,6 +243,14 @@ nav li {
 
 #vaultButt {
     border: 5px solid silver;
+}
+
+#logoButt .boxHead {
+    color: black;
+}
+
+#logoButt {
+    border: 5px solid black;
 }
 
 .boxHead:hover {
