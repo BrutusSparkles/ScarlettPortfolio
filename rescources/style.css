@@ -75,41 +75,14 @@ nav li {
     margin: 10px 0px;
 }
 
-.landingHome {
+.navItem {
     padding: 10px;
 }
 
-.landingHome:hover {
+.navItem:hover {
     background-color: #008395;
     border-radius: 20px;
 }
-
-.landingAboutMe {
-    padding: 10px
-}
-
-.landingAboutMe:hover {
-    background-color: #008395;
-    border-radius: 20px;
-}
-
-.landingPortfolio {
-    padding: 10px;
-}
-
-.landingPortfolio:hover {
-    background-color: #008395;
-    border-radius: 20px;
-}
-
-.landingContactMe {
-    padding: 10px;
-}
-/* 
-.landingContactMe:hover {
-    background-color: #008395;
-    border-radius: 20px;
-} */
 
 .aboutMe {
     color: #ff77a8;
@@ -199,7 +172,7 @@ nav li {
     align-self: center;
     font-size: 2.5rem;
     position: absolute;
-    z-index: 999;
+    z-index: 666;
     margin: 0 auto;
     -webkit-text-stroke:1px white;
     transition: font-size 0.5s;
@@ -261,4 +234,246 @@ nav li {
     grid-area: contactMe;
     background-color: #008395;
     border: 5px solid #ff77a8;
+}
+
+@media (max-width: 1600px) {
+    body {
+        grid-template-columns: 68% 32%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "nav nav" 
+            "landing landing"
+            "aboutMe aboutMeImg1"
+            "aboutMe aboutMeImg1"
+            "portfolio portfolio";    
+    }
+    nav {
+        grid-area: nav;
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        z-index: 999;
+        background-color: #00181e;
+    }
+
+    .navItem {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0px 10px;
+        z-index: 999;
+    }
+    
+    nav h3 {
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #00181e;
+        border-bottom: 5px solid #ff77a8;
+        position: relative;
+        height: auto;
+        z-index: 999;
+    }
+    
+    nav li {
+        margin: 10px 100px;
+        width: auto;
+        z-index: 999;
+    }
+
+    .iconify {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+        z-index: 999;
+    }
+
+    .icon130 {
+        margin-right: 0px;
+    }
+
+    .landing {
+        margin-top: 100px;
+        margin-bottom: 40px;
+        height: 82vh;
+        grid-area: landing;
+    }
+    
+    .landingImg {
+        height: 100%;
+    }
+    
+    .aboutMe h2 {
+        margin-top: 0px;
+    }
+
+    .aboutMe p {
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 1450px) {
+    nav li {
+        margin: 10px 75px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .aboutMe p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    nav li {
+        margin: 10px 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .aboutMeImg1 {
+        display: none;
+    }
+
+    body {
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "nav nav" 
+            "landing landing"
+            "aboutMe aboutMe"
+            "portfolio portfolio";    
+    }
+}
+
+@media (max-width: 1050px) {
+    nav {
+        grid-area: nav;
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .navItem {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0px 10px;
+        z-index: 999;
+    }
+    
+    nav h3 {
+        font-size: 1.2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    nav li {
+        margin: 10px 0px;
+    }
+
+    .iconify {
+        width: 50px;
+        height: 50px;
+    }
+
+    .portfolioBox {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 1000px) {
+    .boxHead {
+        font-size: 1.5rem;
+    }
+
+    .aboutMe p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .portfolioBox {
+        height: 15vh;
+    }
+
+    .aboutMe p {
+        font-size: 1.5rem;
+    }
+
+    .landingImg {
+        height: auto;
+    }
+
+    .landing {
+        height: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        margin: 0px;
+    }
+
+    .portfolioBox {
+        height: 9vh;
+    }
+
+    .portfolioBox h2 {
+        margin: 0px auto;
+    }
+
+    .boxHead {
+        font-size: 1.2rem;
+    }
+
+    .aboutMe {
+        font-size: 1.2rem;
+    }
+
+    .aboutMe p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    nav h3 {
+        font-size: 0.6rem;
+    }
+
+    nav ul {
+        margin: 0px;
+    }
+
+    .iconify {
+        width: 30px;
+        height: 30px;
+    }
+
+    .portfolio {
+        margin: 20vh auto;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .boxHead {
+        font-size: 0.75rem;
+    }
+    
+    .aboutMe {
+        font-size: 1rem;
+    }
+
+    .aboutMe p {
+        font-size: 0.9rem;
+    }
 }
