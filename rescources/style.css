@@ -59,7 +59,7 @@ body {
     width: 100%;
 }
 
-.socialIcon {
+#socialIcon {
     margin-right: 20px;
 }
 
@@ -287,6 +287,12 @@ nav li {
             "aboutMe aboutMeImg1"
             "portfolio portfolio";    
     }
+
+    #socialIcon {
+        width: 30px;
+        height: 30px;
+    }
+
     nav {
         grid-area: nav;
         width: 100%;
@@ -364,15 +370,36 @@ nav li {
     }
 }
 
+@media (max-width: 1400px) {
+    .landingContainer h4 {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 1300px) {
     .aboutMe p {
         font-size: 2.2rem;
+    }
+
+    .landingContainer h1 {
+        font-size: 30px;
     }
 }
 
 @media (max-width: 1250px) {
     nav li {
         margin: 10px 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .landingContainer h4 {
+        font-size: 0.7rem;
+    }
+
+    #socialIcon {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -431,6 +458,16 @@ nav li {
     }
 }
 
+@media (max-width: 1005px) {
+    .landingContainer h4 {
+        font-size: 0.6rem;
+    }
+
+    .landingContainer h1 {
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 1000px) {
     .boxHead {
         font-size: 1.5rem;
@@ -438,6 +475,12 @@ nav li {
 
     .aboutMe p {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .landingContainer {
+        width: 25%;
     }
 }
 
@@ -456,6 +499,13 @@ nav li {
 
     .landing {
         height: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .landingContainer {
+        width: 30%;
+        margin-bottom: 35px;
     }
 }
 
@@ -485,6 +535,28 @@ nav li {
     }
 }
 
+@media (max-width: 600px) {
+    .landingContainer {
+        width: 35%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .landingContainer h1 {
+        font-size: 25px;
+    }
+
+    .landingContainer h4 {
+        font-size: 10px;
+    }
+
+    #socialIcons {
+        width: 15px;
+        height: 15px;
+    }
+}
+
 @media (max-width: 500px) {
     nav h3 {
         font-size: 0.6rem;
@@ -504,6 +576,14 @@ nav li {
         margin-bottom: 30px;
     }
 }
+
+@media (max-width: 450px) {
+    .landingContainer {
+        width: 40%;
+        margin-bottom: 15px;
+    }
+}
+
 @media (max-width: 400px) {
     .boxHead {
         font-size: 0.75rem;
@@ -515,5 +595,17 @@ nav li {
 
     .aboutMe p {
         font-size: 0.9rem;
+    }
+
+    .landingContainer {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .landingContainer {
+        width: 50%;
+        margin-bottom: 15px;
     }
 }
