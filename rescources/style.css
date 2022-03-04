@@ -6,21 +6,22 @@ a {
 
 body {
     padding: 0px;
+    margin: 20px;
     background-color: #00181e;
     display: grid;
-    grid-template-columns: 10% 63% 27%;
-    grid-template-rows: repeat(4, auto);
+    box-sizing: border-box;
+    grid-template-columns: 15% 58% 27%;
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: 
-        "nav landing landing"
-        "nav aboutMe aboutMeImg1"
-        "nav aboutMe aboutMeImg1"
+        "nav landing aboutMeImg1"
+        "nav aboutMe aboutMe"
         "nav portfolio portfolio";
 }
 
 .landing {
+    padding: 20px;
     position: relative;
-    width: 100%;
-    height: 100vh;
+    height: 93vh;
     grid-area: landing;
     display: flex;
     justify-content: center;
@@ -28,19 +29,25 @@ body {
 }
 
 .landingContainer {
-    width: 20%;
+    width: 70%;
     opacity: .7;
     position: absolute;
     display: flex;
     align-self: flex-end;
+    justify-content: space-evenly;
     margin-bottom: 50px;
     flex-wrap: wrap;
     font-weight: bolder;
     background-color: #00181e;
     border: 5px solid #ff77a8;
+    box-shadow: 3px 6px 6px #ffc4d9;
     padding: 5px;
     color: #ff77a8;
     border-radius: 20px;
+}
+
+.landingContainer:hover {
+    background-color: #008395;
 }
 
 .landingContainer h1 {
@@ -56,7 +63,6 @@ body {
 .socials {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 #socialIcon {
@@ -69,12 +75,12 @@ body {
 }
 
 .landingImg {
-    margin-left: 0px;
     box-sizing: border-box;
     border-radius: 20px;
     border: 5px solid #ff77a8;
-    width: 95%;
-    height: 93%;
+    box-shadow: 3px 6px 6px #ffc4d9;
+    height: 100%;
+    width: 100%;
 }
 
 nav {
@@ -117,6 +123,9 @@ nav li {
 
 .navItem {
     padding: 10px;
+    border: 5px solid #ff77a8;
+    border-radius: 20px;
+    box-shadow: 3px 6px 6px #ffc4d9;
 }
 
 .navItem:hover {
@@ -126,51 +135,89 @@ nav li {
 
 .aboutMe {
     color: #ff77a8;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: center;
     box-sizing: border-box;
-    display: block;
     grid-area: aboutMe;
-    height: 100%;
+    padding: 20px;
+    height: 50vh;
     width: 100%;
+}
+
+.aboutMe h2 {
+    margin: 10px auto;
+}
+
+.aboutMe p {
+    margin: 10px auto;
+    font-size: 1.2rem;
+}
+
+.aboutMeContainer {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 5px solid #ff77a8;
+    box-shadow: 3px 6px 6px #ffc4d9;
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.pinkMountain {
+    aspect-ratio: 1400/400;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pmBackground {
+    background-image: url(/layered-peaks-haikei-index.svg);
+}
+
+.pmBackground:hover {
+    background-image: url(/layered-peaks-haikei-hover.svg);
 }
 
 .aboutMeImg1 {
-    display: flex;
-    justify-content: left;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 99.5%;
     grid-area: aboutMeImg1;
-    height: 80vh;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutMeImg1 img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     border: 5px solid #ff77a8;
+    box-shadow: 3px 6px 6px #ffc4d9;
     border-radius: 20px;
 }
 
 .portfolio {
-    margin: 20vh 10vh 10vh 10vh;
-    scroll-padding: 5px;
+    grid-area: portfolio;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    overflow: scroll;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.portfolioBox {
     box-sizing: border-box;
-    grid-area: portfolio;
-    color: #ff77a8;
-    border-radius: 20px;
-    height: 92vh;
-    width: 80%;
-    font-size: 3rem;
-    text-align: center;
+    min-width: 48%;
+    max-width: 48%;
+    height: 20%;
+    border-radius: 15px;
 }
 
 ::-webkit-scrollbar {
+    display: none;
     width: 10px;
     overflow: hidden;
 }
@@ -190,15 +237,9 @@ nav li {
     background: none;
 }
 
-.portfolioBox {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    border: 5px solid #ff77a8;
-    border-radius: 20px;
-    margin-top: 15px;
-    width: 100%;
-    height: 27vh;
+.socialsHead {
+    text-align: center;
+    font-size: 32px;
 }
 
 .portfolioBox img {
@@ -208,66 +249,71 @@ nav li {
     border-radius: 15px;
 }
 
-.boxHead {
-    align-self: center;
-    font-size: 2.5rem;
-    position: absolute;
-    z-index: 666;
-    margin: 0 auto;
-    -webkit-text-stroke:1px white;
-    transition: font-size 0.5s;
+#firstBox img{
+    object-fit: fill;
 }
 
-#dinoButt .boxHead {
-    color: khaki;
+#indiButt {
+    border: 5px solid #ff77a8;
+    box-shadow: 3px 6px 6px #ffc4d9;
+}
+
+#indiButt:hover {
+    box-shadow: 6px 12px 12px #ffc4d9;
 }
 
 #dinoButt {
     border: 5px solid khaki;
+    box-shadow: 3px 6px 6px #f6f0bb;
 }
 
-#mythButt .boxHead {
-    color: coral;
+#dinoButt:hover {
+    box-shadow: 6px 12px 12px #f6f0bb;
 }
 
 #mythButt {
     border: 5px solid coral;
+    box-shadow: 3px 6px 6px #ffb79d;
 }
 
-#paintButt .boxHead {
-    color: aqua;
+#mythButt:hover {
+    box-shadow: 6px 12px 12px #ffb79d;
 }
 
 #paintButt {
     border: 5px solid aqua;
+    box-shadow: 3px 6px 6px #b1ffff;
 }
 
-#tattooButt .boxHead {
-    color: indianred;
+#paintButt:hover {
+    box-shadow: 6px 12px 12px #b1ffff;
 }
 
 #tattooButt {
     border: 5px solid indianred;
+    box-shadow: 3px 6px 6px #df9797;
 }
 
-#vaultButt .boxHead {
-    color: silver;
+#tattooButt:hover {
+    box-shadow: 6px 12px 12px #df9797;
 }
 
 #vaultButt {
     border: 5px solid silver;
+    box-shadow: 3px 6px 6px #e6e6e6;
 }
 
-#logoButt .boxHead {
-    color: black;
+#vaultButt:hover {
+    box-shadow: 6px 12px 12px #e6e6e6;
 }
 
 #logoButt {
     border: 5px solid black;
+    box-shadow: 3px 6px 6px white;
 }
 
-.boxHead:hover {
-    font-size: 3.5rem;
+#logoButt:hover {
+    box-shadow: 6px 12px 12px white;
 }
 
 .contactMe {
@@ -275,7 +321,7 @@ nav li {
     background-color: #008395;
     border: 5px solid #ff77a8;
 }
-
+/* 
 @media (max-width: 1600px) {
     body {
         grid-template-columns: 68% 32%;
@@ -362,9 +408,9 @@ nav li {
     .aboutMe p {
         margin: 0px 10px;
     }
-}
+} */
 
-@media (max-width: 1450px) {
+/* @media (max-width: 1450px) {
     nav li {
         margin: 10px 75px;
     }
@@ -454,7 +500,8 @@ nav li {
     }
 
     .portfolioBox {
-        height: 20vh;
+        height: 15vh;
+        margin: 15px 0px;
     }
 }
 
@@ -634,4 +681,109 @@ nav li {
     nav h3 {
         font-size: 0.4rem;
     }
+} */
+
+@media (max-width: 1359px) {
+    body {
+        grid-template-columns: 65% 35%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "nav nav" 
+            "landing aboutMeImg1"
+            "aboutMe aboutMe"
+            "portfolio portfolio";    
+    }
+
+    nav {
+        grid-area: nav;
+        margin-top: 0px;
+        width: 100%;
+        height: 15vh;
+        position: fixed;
+        z-index: 999;
+        background-color: #00181e;
+    }
+
+    .navItem {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0px 10px;
+        z-index: 999;
+    }
+    
+    nav h3 {
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    nav ul {
+        margin: 0px 0px 20px 0px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        background-color: #00181e;
+        border-bottom: 5px solid #ff77a8;
+        box-shadow: 3px 6px 6px #ffc4d9;
+        position: relative;
+        height: auto;
+        z-index: 999;
+    }
+    
+    nav li {
+        display: flex;
+        margin: 20px;
+        width: auto;
+        z-index: 999;
+    }
+
+    .iconify {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+        z-index: 999;
+    }
+
+    .icon130 {
+        margin-right: 0px;
+    }
+
+    #socialIcon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .landing {
+        margin-top: 15vh;
+        height: 78vh;;
+    }
+
+    .aboutMeImg1 img {
+        margin-top: 15vh;
+        height: 77vh;
+        grid-area: aboutMeImg1;
+    }
 }
+
+@media (max-width: 939px) {
+    .portfolioBox {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 10px 0px;
+    }
+
+    .socialsHead {
+        font-size: 20px;
+    }
+
+    .socials h4 {
+        font-size: 14px;
+    }
+
+    #socialIcon {
+        height: 20px;
+        margin-right: 5px;
+    }
+}
+

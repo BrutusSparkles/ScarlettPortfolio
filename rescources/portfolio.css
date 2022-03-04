@@ -7,7 +7,7 @@ body {
     padding: 0px;
     background-color: #00181e;
     display: grid;
-    grid-template-columns: 10% 45% 45%;
+    grid-template-columns: 16% 42% 42%;
     grid-template-areas: "nav gallery gallery";
     grid-gap: 30px;
 
@@ -47,14 +47,12 @@ nav h3 {
 
 nav ul {
     margin: 0 auto;
-    margin-left: 20px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    height: 100vh;
+    height: 100%;
     list-style-type: none;
     position: fixed;
-    padding-left: 0px;
 }
 
 nav li {
@@ -70,6 +68,9 @@ nav li {
 
 .navItem {
     padding: 10px;
+    border: 5px solid #ff77a8;
+    border-radius: 20px;
+    box-shadow: 3px 6px 6px #ffc4d9;
 }
 
 .navItem:hover {
